@@ -10,12 +10,12 @@ export default async function Home() {
 
   return (
     <main>
-      <h1 className="font-bold text-3xl">Home characters</h1>
+      <h1 className="font-bold font-inter text-3xl">Home characters</h1>
       <Hello />
       {characters.results.map(
         (char: { id: string; name: string; image: string }) => (
           <div key={char.id}>
-            <h4>{char.name}</h4>
+            <h4 className="text-lg font-space-grotesk">{char.name}</h4>
             <Image src={char.image} width={200} height={200} alt={char.name} />
           </div>
         )
